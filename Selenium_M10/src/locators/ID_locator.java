@@ -1,0 +1,27 @@
+package locators;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ID_locator {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//Thread.sleep(2000);
+		
+		driver.get("https://demoapps.qspiders.com/ui?scenario=1");
+		Thread.sleep(2000);
+		driver.findElement(By.id("name")).sendKeys("Akash");
+		//Thread.sleep(1000);
+		driver.findElement(By.id("email")).sendKeys("Akash@12");
+		//Thread.sleep(1000);
+		driver.findElement(By.id("password")).sendKeys("158563");
+
+	}
+
+}
